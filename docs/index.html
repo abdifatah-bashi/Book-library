@@ -3,84 +3,170 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Management App</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <title>Nab Bibliotek</title>
   </head>
   <body>
-    <div class="container mt-5">
-      <h1 class="mb-4">Book Management App</h1>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <div class="card-header bg-primary text-white">Add New Book</div>
-            <div class="card-body">
-              <form id="addBookForm">
-                <div class="mb-3">
-                  <label for="title" class="form-label">Title</label>
-                  <input type="text" id="title" class="form-control" required />
-                </div>
-                <div class="mb-3">
-                  <label for="author" class="form-label">Author</label>
-                  <input
-                    type="text"
-                    id="author"
-                    class="form-control"
-                    required
-                  />
-                </div>
-                <button type="submit" class="btn btn-success">Add Book</button>
-              </form>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark text-white">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white h1 p-2" href="#">Nabo Bibliotek</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+          <button class="btn btn-warning fw-bold me-2" type="submit">
+            Bli låner
+          </button>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-warning" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <section class="my-5">
+        <h3>Anbefaler for deg</h3>
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="card border-0" style="width: 18rem">
+            <img
+              src="https://shorturl.at/djAW4"
+              class="card-img-top border-0"
+              style="height: 300px"
+            />
+            <div class="card-body row">
+              <h5 class="card-title">La masken falle</h5>
+              <p class="card-text text-muted">John Iden, Kjersti Berg</p>
+              <a href="#" class="btn btn-warning btn-block fw-bold">303 ,-</a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card border-0" style="width: 18rem">
+            <img
+              src="https://shorturl.at/novY6"
+              class="card-img-top border-0"
+              style="height: 300px"
+            />
+            <div class="card-body row">
+              <h5 class="card-title">Kjære leder</h5>
+              <p class="card-text text-muted">John Iden, Kjersti Berg</p>
+              <a href="#" class="btn btn-warning btn-block fw-bold">303 ,-</a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card border-0" style="width: 18rem">
+            <img
+              src="https://www.adlibris.com/images/9781846096242/pride-prejudice.jpg"
+              class="card-img-top border-0"
+              style="height: 300px"
+            />
+            <div class="card-body row">
+              <h5 class="card-title">Pride and prejudice</h5>
+              <p class="card-text text-muted">John Iden, Kjersti Berg</p>
+              <a href="#" class="btn btn-warning btn-block fw-bold">303 ,-</a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card border-0" style="width: 18rem">
+            <img
+              src="https://www.adlibris.com/images/9788253043197/bittas-sjal-og-skjerf.jpg"
+              class="card-img-top border-0"
+              style="height: 300px"
+            />
+            <div class="card-body row">
+              <h5 class="card-title">Bittas sjal og skjerf</h5>
+              <p class="card-text text-muted">John Iden, Kjersti Berg</p>
+              <a href="#" class="btn btn-warning btn-block fw-bold">303 ,-</a>
             </div>
           </div>
         </div>
-        <div class="col-md-8">
-          <div class="alert alert-info mb-4">
-            <strong>Info:</strong> Click the "Delete" button to remove a book.
+      </section>
+
+      <!-- 2. Section -->
+      <section class="my-5">
+        <h3>Pensumbøker med rabatt</h3>
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="card border-0" style="width: 18rem">
+            <img
+              src="https://www.adlibris.com/images/9788245033403/strategi.jpg"
+              class="card-img-top border-0"
+              style="height: 300px"
+            />
+            <div class="card-body row">
+              <h5 class="card-title">Strategi</h5>
+              <p class="card-text text-muted">John Iden, Kjersti Berg</p>
+              <a href="#" class="btn btn-warning btn-block fw-bold">303 ,-</a>
+            </div>
           </div>
-          <ul id="bookList" class="list-group">
-            <!-- Book list items will be added here -->
-          </ul>
+
+          <!-- Card 2 -->
+          <div class="card border-0" style="width: 18rem">
+            <img
+              src="https://www.adlibris.com/images/9788202591076/personer-med-demens-m%C3%B8te-og-samhandling.jpg"
+              class="card-img-top border-0"
+              style="height: 300px"
+            />
+            <div class="card-body row">
+              <h5 class="card-title">Personer med demens</h5>
+              <p class="card-text text-muted">John Iden, Kjersti Berg</p>
+              <a href="#" class="btn btn-warning btn-block fw-bold">569 ,-</a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card border-0" style="width: 18rem">
+            <img
+              src="https://www.adlibris.com/images/9788271464172/rik-pa-gjeld.jpg"
+              class="card-img-top border-0"
+              style="height: 300px"
+            />
+            <div class="card-body row">
+              <h5 class="card-title">Rik på gjeld</h5>
+              <p class="card-text text-muted">John Iden, Kjersti Berg</p>
+              <a href="#" class="btn btn-warning btn-block fw-bold">425 ,-</a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card border-0" style="width: 18rem">
+            <img
+              src="https://www.adlibris.com/images/9788205582125/arsregnskapet.jpg"
+              class="card-img-top border-0"
+              style="height: 300px"
+            />
+            <div class="card-body row">
+              <h5 class="card-title">Årsregnskap</h5>
+              <p class="card-text text-muted">John Iden, Kjersti Berg</p>
+              <a href="#" class="btn btn-warning btn-block fw-bold">402 ,-</a>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
-
-    <script>
-      const addBookForm = document.getElementById("addBookForm");
-      const bookList = document.getElementById("bookList");
-
-      addBookForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        const title = document.getElementById("title").value.trim();
-        const author = document.getElementById("author").value.trim();
-
-        if (title && author) {
-          const bookListItem = document.createElement("li");
-          bookListItem.classList.add(
-            "list-group-item",
-            "d-flex",
-            "justify-content-between",
-            "align-items-center"
-          );
-          bookListItem.innerHTML = `
-          <span>${title} by ${author}</span>
-          <button class="btn btn-danger delete-book">Delete</button>
-        `;
-          bookList.appendChild(bookListItem);
-
-          document.getElementById("title").value = "";
-          document.getElementById("author").value = "";
-        }
-      });
-
-      bookList.addEventListener("click", function (event) {
-        if (event.target.classList.contains("delete-book")) {
-          event.target.parentElement.remove();
-        }
-      });
-    </script>
   </body>
 </html>
